@@ -1,0 +1,28 @@
+{
+  "name": "playwright-typescript-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "headless-test": "cross-env test_env=test npx playwright test --reporter=html",
+    "headed-test": "npm run lint && cross-env test_env=test npx playwright test --headed",
+    "docker-build": "docker build -t playwright-docker .",
+    "docker-run-tests": "docker run -it -v $PWD/playwright-report:/app/playwright-report playwright-docker:latest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^20.8.8",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "eslint": "^8.56.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.4.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.3.1"
+  }
+}
