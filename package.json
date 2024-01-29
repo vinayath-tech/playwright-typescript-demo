@@ -8,7 +8,7 @@
     "headless-test": "cross-env test_env=test npx playwright test --reporter=html",
     "headed-test": "npm run lint && cross-env test_env=test npx playwright test --headed",
     "docker-build": "docker build -t playwright-docker .",
-    "docker-run-tests": "docker run -it playwright-docker:latest"
+    "docker-run-tests": "winpty docker run -it playwright-docker:latest"
   },
   "keywords": [],
   "author": "",
