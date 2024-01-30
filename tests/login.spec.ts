@@ -1,4 +1,5 @@
-import { test } from "../lib/baseTest";
+import exp from "constants";
+import { expect, test } from "../lib/baseTest";
 
 test.describe('Login into an application', () => {
 
@@ -7,10 +8,15 @@ test.describe('Login into an application', () => {
         await loginPage.verifySuccessfullLogin('Swag Labs');
     });
 
-    test('Login with Invalid credentials', async({ loginPage}) => {
+    test('Login with Invalid credentials', async({ loginPage, makeAxeBuilder }) => {
         const errorMsg = "Epic sadface: Username and password do not match any user in this service";
-
+        
         await loginPage.goToLoginPage();
+
+        //Accessibility scanning on a page
+        const accessibilityScanResults = await makeAxeBuilder().analyze();
+        // expect(accessibilityScanResults.violations).toEqual([]);
+
         await loginPage.loginWithInvalidCredentials();
         await loginPage.verifyErrorMessages(errorMsg);
     });
