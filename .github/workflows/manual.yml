@@ -32,10 +32,6 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
-  
-  report-tests:
-    runs-on: ubuntu-latest
-    steps:
     - name: Setup Pages
       uses: actions/configure-pages@v2
     - name: Upload artifact
