@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --ext .ts",
-    "headless-test": "npm run lint && cross-env test_env=test npx playwright test --reporter=html",
+    "headless-test": "cross-env test_env=test npx playwright test --reporter=html",
     "headed-test": "npm run lint && cross-env test_env=test npx playwright test --headed",
     "accessibility-test": "cross-env test_env=test npx playwright test --grep @pa11y-tests",
     "docker-build": "docker build -t playwright-docker .",
