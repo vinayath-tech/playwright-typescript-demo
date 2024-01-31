@@ -22,6 +22,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+      - name: Install packages
+        run: npm install
       - name: Run accessibility test
         run: npm run accessibility-test
       - uses: actions/upload-artifact@v3
