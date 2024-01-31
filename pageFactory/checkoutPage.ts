@@ -37,6 +37,14 @@ export class CheckoutPage {
         this.backBtn = page.getByRole('button', {name: 'Back Home'});
     }
 
+    async goToCheckoutPage() {
+        await this.page.goto('/checkout-step-one.html');
+    }
+
+    async goToFinalCheckoutPage() {
+        await this.page.goto('/checkout-step-two.html');
+    }
+
     async fillPersonalDetails() {
         await this.fname.fill(faker.person.firstName());
         await this.lname.fill(faker.person.lastName());

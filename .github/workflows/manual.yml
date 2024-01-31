@@ -14,6 +14,23 @@ permissions:
   id-token: write
 
 jobs:
+  accessibility-tests:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Run accessibility test
+        run: npm run accessibility-test
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: accessibility-report
+          path: accessibility-report/
+          retention-days: 30
+
   ui-tests:
     timeout-minutes: 60
     runs-on: ubuntu-latest
