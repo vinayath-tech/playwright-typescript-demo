@@ -88,11 +88,11 @@
             <div class="summarySection">
                 <div class="summary">
                     Page URL:
-                    <a href="about:blank" target="_blank" class="card-link">about:blank</a>
+                    <a href="https:&#x2F;&#x2F;www.saucedemo.com&#x2F;checkout-step-two.html" target="_blank" class="card-link">https:&#x2F;&#x2F;www.saucedemo.com&#x2F;checkout-step-two.html</a>
                     <br />
                 </div>
             </div>
-            <h5>axe-core found <span class="badge badge-warning">4</span> violations</h5>
+            <h5>axe-core found <span class="badge badge-warning">14</span> violations</h5>
             <table class="table table-striped table-bordered">
                 <thead>
                     <tr>
@@ -107,22 +107,6 @@
                 <tbody>
                     <tr>
                         <th scope="row"><a href="#1" class="card-link">1</a></th>
-                        <td>Documents must have &lt;title&gt; element to aid in navigation</td>
-                        <td>document-title</td>
-                        <td>WCAG 2 Level A, WCAG 2.4.2</td>
-                        <td>serious</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><a href="#2" class="card-link">2</a></th>
-                        <td>&lt;html&gt; element must have a lang attribute</td>
-                        <td>html-has-lang</td>
-                        <td>WCAG 2 Level A, WCAG 3.1.1</td>
-                        <td>serious</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><a href="#3" class="card-link">3</a></th>
                         <td>Document should have one main landmark</td>
                         <td>landmark-one-main</td>
                         <td>Best practice</td>
@@ -130,12 +114,20 @@
                         <td>1</td>
                     </tr>
                     <tr>
-                        <th scope="row"><a href="#4" class="card-link">4</a></th>
+                        <th scope="row"><a href="#2" class="card-link">2</a></th>
                         <td>Page should contain a level-one heading</td>
                         <td>page-has-heading-one</td>
                         <td>Best practice</td>
                         <td>moderate</td>
                         <td>1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="#3" class="card-link">3</a></th>
+                        <td>All page content should be contained by landmarks</td>
+                        <td>region</td>
+                        <td>Best practice</td>
+                        <td>moderate</td>
+                        <td>12</td>
                     </tr>
                 </tbody>
             </table>
@@ -144,165 +136,7 @@
                 <div class="card-body">
                     <div class="violationCardLine">
                         <h5 class="card-title violationCardTitleItem">
-                            <a id="1">1.</a> Documents must have &lt;title&gt; element to aid in navigation
-                        </h5>
-                        <a
-                            href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;4.8&#x2F;document-title?application&#x3D;playwright"
-                            target="_blank"
-                            class="card-link violationCardTitleItem learnMore"
-                            >Learn more</a
-                        >
-                    </div>
-                    <div class="violationCardLine">
-                        <h6 class="card-subtitle mb-2 text-muted">document-title</h6>
-                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
-                            WCAG 2 Level A, WCAG 2.4.2
-                        </h6>
-                    </div>
-                    <div class="violationCardLine">
-                        <p class="card-text">Ensures each HTML document contains a non-empty &lt;title&gt; element</p>
-                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
-                            serious
-                        </h6>
-                    </div>
-                    <div class="violationCardLine">
-                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
-                            Issue Tags: 
-                            <span class="badge bg-light text-dark"> cat.text-alternatives </span>
-
-                            <span class="badge bg-light text-dark"> wcag2a </span>
-
-                            <span class="badge bg-light text-dark"> wcag242 </span>
-
-                            <span class="badge bg-light text-dark"> TTv5 </span>
-
-                            <span class="badge bg-light text-dark"> TT12.a </span>
-
-                            <span class="badge bg-light text-dark"> EN-301-549 </span>
-
-                            <span class="badge bg-light text-dark"> EN-9.2.4.2 </span>
-
-                            <span class="badge bg-light text-dark"> ACT </span>
-                        </h6>
-                    </div>
-                    <div class="violationNode">
-                        <table class="table table-sm table-bordered">
-                            <thead>
-                                <tr>
-                                    <th style="width: 2%">#</th>
-                                    <th style="width: 49%">Issue Description</th>
-                                    <th style="width: 49%">
-                                        To solve this violation, you need to...
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>
-                                        <p><strong>Element location</strong></p>
-                                        <pre><code class="css text-wrap">html</code></pre>
-                                        <p><strong>Element source</strong></p>
-                                        <pre><code class="html text-wrap">&lt;html&gt;&lt;head&gt;&lt;&#x2F;head&gt;&lt;body&gt;&lt;&#x2F;body&gt;&lt;&#x2F;html&gt;</code></pre>
-                                    </td>
-                                    <td>
-                                        <div class="wrapBreakWord">
-                                            <p>Fix any of the following:</p>
-                                            <ul class="text-muted">
-                                                <li>  Document does not have a non-empty &lt;title&gt; element</li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="card violationCard">
-                <div class="card-body">
-                    <div class="violationCardLine">
-                        <h5 class="card-title violationCardTitleItem">
-                            <a id="2">2.</a> &lt;html&gt; element must have a lang attribute
-                        </h5>
-                        <a
-                            href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;4.8&#x2F;html-has-lang?application&#x3D;playwright"
-                            target="_blank"
-                            class="card-link violationCardTitleItem learnMore"
-                            >Learn more</a
-                        >
-                    </div>
-                    <div class="violationCardLine">
-                        <h6 class="card-subtitle mb-2 text-muted">html-has-lang</h6>
-                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
-                            WCAG 2 Level A, WCAG 3.1.1
-                        </h6>
-                    </div>
-                    <div class="violationCardLine">
-                        <p class="card-text">Ensures every HTML document has a lang attribute</p>
-                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
-                            serious
-                        </h6>
-                    </div>
-                    <div class="violationCardLine">
-                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
-                            Issue Tags: 
-                            <span class="badge bg-light text-dark"> cat.language </span>
-
-                            <span class="badge bg-light text-dark"> wcag2a </span>
-
-                            <span class="badge bg-light text-dark"> wcag311 </span>
-
-                            <span class="badge bg-light text-dark"> TTv5 </span>
-
-                            <span class="badge bg-light text-dark"> TT11.a </span>
-
-                            <span class="badge bg-light text-dark"> EN-301-549 </span>
-
-                            <span class="badge bg-light text-dark"> EN-9.3.1.1 </span>
-
-                            <span class="badge bg-light text-dark"> ACT </span>
-                        </h6>
-                    </div>
-                    <div class="violationNode">
-                        <table class="table table-sm table-bordered">
-                            <thead>
-                                <tr>
-                                    <th style="width: 2%">#</th>
-                                    <th style="width: 49%">Issue Description</th>
-                                    <th style="width: 49%">
-                                        To solve this violation, you need to...
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>
-                                        <p><strong>Element location</strong></p>
-                                        <pre><code class="css text-wrap">html</code></pre>
-                                        <p><strong>Element source</strong></p>
-                                        <pre><code class="html text-wrap">&lt;html&gt;&lt;head&gt;&lt;&#x2F;head&gt;&lt;body&gt;&lt;&#x2F;body&gt;&lt;&#x2F;html&gt;</code></pre>
-                                    </td>
-                                    <td>
-                                        <div class="wrapBreakWord">
-                                            <p>Fix any of the following:</p>
-                                            <ul class="text-muted">
-                                                <li>  The &lt;html&gt; element does not have a lang attribute</li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="card violationCard">
-                <div class="card-body">
-                    <div class="violationCardLine">
-                        <h5 class="card-title violationCardTitleItem">
-                            <a id="3">3.</a> Document should have one main landmark
+                            <a id="1">1.</a> Document should have one main landmark
                         </h5>
                         <a
                             href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;4.8&#x2F;landmark-one-main?application&#x3D;playwright"
@@ -349,7 +183,7 @@
                                         <p><strong>Element location</strong></p>
                                         <pre><code class="css text-wrap">html</code></pre>
                                         <p><strong>Element source</strong></p>
-                                        <pre><code class="html text-wrap">&lt;html&gt;&lt;head&gt;&lt;&#x2F;head&gt;&lt;body&gt;&lt;&#x2F;body&gt;&lt;&#x2F;html&gt;</code></pre>
+                                        <pre><code class="html text-wrap">&lt;html lang&#x3D;&quot;en&quot;&gt;</code></pre>
                                     </td>
                                     <td>
                                         <div class="wrapBreakWord">
@@ -369,7 +203,7 @@
                 <div class="card-body">
                     <div class="violationCardLine">
                         <h5 class="card-title violationCardTitleItem">
-                            <a id="4">4.</a> Page should contain a level-one heading
+                            <a id="2">2.</a> Page should contain a level-one heading
                         </h5>
                         <a
                             href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;4.8&#x2F;page-has-heading-one?application&#x3D;playwright"
@@ -416,13 +250,267 @@
                                         <p><strong>Element location</strong></p>
                                         <pre><code class="css text-wrap">html</code></pre>
                                         <p><strong>Element source</strong></p>
-                                        <pre><code class="html text-wrap">&lt;html&gt;&lt;head&gt;&lt;&#x2F;head&gt;&lt;body&gt;&lt;&#x2F;body&gt;&lt;&#x2F;html&gt;</code></pre>
+                                        <pre><code class="html text-wrap">&lt;html lang&#x3D;&quot;en&quot;&gt;</code></pre>
                                     </td>
                                     <td>
                                         <div class="wrapBreakWord">
                                             <p>Fix all of the following:</p>
                                             <ul class="text-muted">
                                                 <li>  Page must have a level-one heading</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card violationCard">
+                <div class="card-body">
+                    <div class="violationCardLine">
+                        <h5 class="card-title violationCardTitleItem">
+                            <a id="3">3.</a> All page content should be contained by landmarks
+                        </h5>
+                        <a
+                            href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;4.8&#x2F;region?application&#x3D;playwright"
+                            target="_blank"
+                            class="card-link violationCardTitleItem learnMore"
+                            >Learn more</a
+                        >
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted">region</h6>
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Best practice
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <p class="card-text">Ensures all page content is contained by landmarks</p>
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            moderate
+                        </h6>
+                    </div>
+                    <div class="violationCardLine">
+                        <h6 class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.keyboard </span>
+
+                            <span class="badge bg-light text-dark"> best-practice </span>
+                        </h6>
+                    </div>
+                    <div class="violationNode">
+                        <table class="table table-sm table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.bm-icon</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;img src&#x3D;&quot;data:image&#x2F;png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw&#x2F;eHBhY2tldCBiZWdpbj0i77u&#x2F;IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMC1jMDAwIDc5LmRhNGE3ZTVlZiwgMjAyMi8xMS8yMi0xMzo1MDowNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI0LjEgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTA3QzBCMEVBRUYzMTFFREIwRThFMzc3OTlDRTMyNUIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTA3QzBCMEZBRUYzMTFFREIwRThFMzc3OTlDRTMyNUIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBMDdDMEIwQ0FFRjMxMUVEQjBFOEUzNzc5OUNFMzI1QiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBMDdDMEIwREFFRjMxMUVEQjBFOEUzNzc5OUNFMzI1QiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI&#x2F;Pq0LVkQAAAERSURBVHjaYvz&#x2F;&#x2F;z&#x2F;DQAImhgEGow5gARE379wx8IuN2f&#x2F;2&#x2F;XsBeliqqqj4YMHkKYHqKioXwCEwb+mSAnpZDgK3799XmL9sWT48CrQ1NS&#x2F;QO+gtTUwOgmhGWDY8c+GCw9NnzxToYbm0lNQDEwODAygOGM2Gow4Y0ILo+YsXCgtWLM&#x2F;&#x2F;+OkzXcoCfj7eDwkRURMlJcQfgB0wf&#x2F;mygr6ZM&#x2F;Pp6XNg7mOsKiwqGBxRkBAZNQFEf&#x2F;r8hZ8elvLx8nxMiIyeMFoQjTpg8BREA1kdgx2wcdu2hOSiwvn09HlfY1NhXHj4BHAUHDt9yoHeQX&#x2F;t5k19eBpIio6ZAGoo0styYUHBD4lRURNHC6JRB4w6AAQAAgwA&#x2F;fRn191dMT8AAAAASUVORK5CYII&#x3D;&quot; class&#x3D;&quot;bm-icon&quot; srcset&#x3D;&quot;&#x2F;static&#x2F;media&#x2F;menu3x.52cc17a3.svg&quot; alt&#x3D;&quot;Open Menu&quot; style&#x3D;&quot;width: 100%; height: 100%;&quot;&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Some page content is not contained by landmarks</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.header_label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;div class&#x3D;&quot;header_label&quot;&gt;&lt;div class&#x3D;&quot;app_logo&quot;&gt;Swag Labs&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Some page content is not contained by landmarks</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.header_secondary_container</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;div class&#x3D;&quot;header_secondary_container&quot;&gt;&lt;span class&#x3D;&quot;title&quot;&gt;Checkout: Overview&lt;&#x2F;span&gt;&lt;&#x2F;div&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Some page content is not contained by landmarks</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.cart_list</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;div class&#x3D;&quot;cart_list&quot;&gt;&lt;div class&#x3D;&quot;cart_quantity_label&quot;&gt;QTY&lt;&#x2F;div&gt;&lt;div class&#x3D;&quot;cart_desc_label&quot;&gt;Description&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Some page content is not contained by landmarks</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.summary_info_label:nth-child(1)</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;div class&#x3D;&quot;summary_info_label&quot;&gt;Payment Information&lt;&#x2F;div&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Some page content is not contained by landmarks</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.summary_value_label:nth-child(2)</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;div class&#x3D;&quot;summary_value_label&quot;&gt;SauceCard #31337&lt;&#x2F;div&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Some page content is not contained by landmarks</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.summary_info_label:nth-child(3)</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;div class&#x3D;&quot;summary_info_label&quot;&gt;Shipping Information&lt;&#x2F;div&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Some page content is not contained by landmarks</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.summary_value_label:nth-child(4)</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;div class&#x3D;&quot;summary_value_label&quot;&gt;Free Pony Express Delivery!&lt;&#x2F;div&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Some page content is not contained by landmarks</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.summary_info_label:nth-child(5)</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;div class&#x3D;&quot;summary_info_label&quot;&gt;Price Total&lt;&#x2F;div&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Some page content is not contained by landmarks</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.summary_subtotal_label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;div class&#x3D;&quot;summary_subtotal_label&quot;&gt;Item total: $0&lt;&#x2F;div&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Some page content is not contained by landmarks</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.summary_tax_label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;div class&#x3D;&quot;summary_tax_label&quot;&gt;Tax: $0.00&lt;&#x2F;div&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Some page content is not contained by landmarks</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">.summary_total_label</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;div class&#x3D;&quot;summary_info_label summary_total_label&quot;&gt;Total: $0.00&lt;&#x2F;div&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Some page content is not contained by landmarks</li>
                                             </ul>
                                         </div>
                                     </td>
@@ -443,7 +531,7 @@
                                 aria-expanded="false"
                                 aria-controls="passes"
                             >
-                                axe returned 1 passed axe
+                                axe returned 20 passed axe
                                 checks. Expand details on
                                 click
                             </button>
@@ -475,6 +563,158 @@
                                         <td>1</td>
                                     </tr>
                                 </tbody>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>ARIA hidden element must not be focusable or contain focusable elements</td>
+                                        <td>aria-hidden-focus</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Inline text spacing must be adjustable with custom stylesheets</td>
+                                        <td>avoid-inline-spacing</td>
+                                        <td>WCAG 2.1 Level AA, WCAG 1.4.1.2</td>
+                                        <td>3</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Buttons must have discernible text</td>
+                                        <td>button-name</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                        <td>3</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td>Elements must meet minimum color contrast ratio thresholds</td>
+                                        <td>color-contrast</td>
+                                        <td>WCAG 2 Level AA, WCAG 1.4.3</td>
+                                        <td>15</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">6</th>
+                                        <td>Documents must have &lt;title&gt; element to aid in navigation</td>
+                                        <td>document-title</td>
+                                        <td>WCAG 2 Level A, WCAG 2.4.2</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">7</th>
+                                        <td>&lt;html&gt; element must have a lang attribute</td>
+                                        <td>html-has-lang</td>
+                                        <td>WCAG 2 Level A, WCAG 3.1.1</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">8</th>
+                                        <td>&lt;html&gt; element must have a valid value for the lang attribute</td>
+                                        <td>html-lang-valid</td>
+                                        <td>WCAG 2 Level A, WCAG 3.1.1</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">9</th>
+                                        <td>Images must have alternate text</td>
+                                        <td>image-alt</td>
+                                        <td>WCAG 2 Level A, WCAG 1.1.1</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">10</th>
+                                        <td>Alternative text of images should not be repeated as text</td>
+                                        <td>image-redundant-alt</td>
+                                        <td>Best practice</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">11</th>
+                                        <td>Contentinfo landmark should not be contained in another landmark</td>
+                                        <td>landmark-contentinfo-is-top-level</td>
+                                        <td>Best practice</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">12</th>
+                                        <td>Document should not have more than one contentinfo landmark</td>
+                                        <td>landmark-no-duplicate-contentinfo</td>
+                                        <td>Best practice</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">13</th>
+                                        <td>Ensures landmarks are unique</td>
+                                        <td>landmark-unique</td>
+                                        <td>Best practice</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">14</th>
+                                        <td>Links must have discernible text</td>
+                                        <td>link-name</td>
+                                        <td>WCAG 2 Level A, WCAG 2.4.4, WCAG 4.1.2</td>
+                                        <td>3</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">15</th>
+                                        <td>&lt;ul&gt; and &lt;ol&gt; must only directly contain &lt;li&gt;, &lt;script&gt; or &lt;template&gt; elements</td>
+                                        <td>list</td>
+                                        <td>WCAG 2 Level A, WCAG 1.3.1</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">16</th>
+                                        <td>&lt;li&gt; elements must be contained in a &lt;ul&gt; or &lt;ol&gt;</td>
+                                        <td>listitem</td>
+                                        <td>WCAG 2 Level A, WCAG 1.3.1</td>
+                                        <td>3</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">17</th>
+                                        <td>Users should be able to zoom and scale the text up to 500%</td>
+                                        <td>meta-viewport-large</td>
+                                        <td>Best practice</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">18</th>
+                                        <td>Zooming and scaling must not be disabled</td>
+                                        <td>meta-viewport</td>
+                                        <td>WCAG 2 Level AA, WCAG 1.4.4</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">19</th>
+                                        <td>Interactive controls must not be nested</td>
+                                        <td>nested-interactive</td>
+                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                                        <td>5</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">20</th>
+                                        <td>All page content should be contained by landmarks</td>
+                                        <td>region</td>
+                                        <td>Best practice</td>
+                                        <td>32</td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
                     </div>
@@ -491,7 +731,7 @@
                                 aria-expanded="false"
                                 aria-controls="incomplete"
                             >
-                                axe returned 0 incomplete checks. Expand
+                                axe returned 2 incomplete checks. Expand
                                 details on click
                             </button>
                         </h5>
@@ -516,6 +756,34 @@
                                 >
                                 to learn more.
                             </p>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 5%">#</th>
+                                        <th style="width: 50%">Description</th>
+                                        <th style="width: 20%">Axe rule ID</th>
+                                        <th style="width: 15%">WCAG</th>
+                                        <th style="width: 10%">Nodes with incomplete check</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Page must have means to bypass repeated blocks</td>
+                                        <td>bypass</td>
+                                        <td>WCAG 2 Level A, WCAG 2.4.1</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Elements must meet minimum color contrast ratio thresholds</td>
+                                        <td>color-contrast</td>
+                                        <td>WCAG 2 Level AA, WCAG 1.4.3</td>
+                                        <td>4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -531,7 +799,7 @@
                                 aria-expanded="false"
                                 aria-controls="inapplicable"
                             >
-                                axe returned 83 inapplicable checks.
+                                axe returned 65 inapplicable checks.
                                 Expand details on click
                             </button>
                         </h5>
@@ -630,517 +898,391 @@
                                 </tbody>
                                     <tr>
                                         <th scope="row">10</th>
-                                        <td>ARIA hidden element must not be focusable or contain focusable elements</td>
-                                        <td>aria-hidden-focus</td>
-                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
-                                    </tr>
-                                </tbody>
-                                    <tr>
-                                        <th scope="row">11</th>
                                         <td>ARIA input fields must have an accessible name</td>
                                         <td>aria-input-field-name</td>
                                         <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">12</th>
+                                        <th scope="row">11</th>
                                         <td>ARIA meter nodes must have an accessible name</td>
                                         <td>aria-meter-name</td>
                                         <td>WCAG 2 Level A, WCAG 1.1.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">13</th>
+                                        <th scope="row">12</th>
                                         <td>ARIA progressbar nodes must have an accessible name</td>
                                         <td>aria-progressbar-name</td>
                                         <td>WCAG 2 Level A, WCAG 1.1.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">14</th>
+                                        <th scope="row">13</th>
                                         <td>Elements must only use permitted ARIA attributes</td>
                                         <td>aria-prohibited-attr</td>
                                         <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">15</th>
+                                        <th scope="row">14</th>
                                         <td>Required ARIA attributes must be provided</td>
                                         <td>aria-required-attr</td>
                                         <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">16</th>
+                                        <th scope="row">15</th>
                                         <td>Certain ARIA roles must contain particular children</td>
                                         <td>aria-required-children</td>
                                         <td>WCAG 2 Level A, WCAG 1.3.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">17</th>
+                                        <th scope="row">16</th>
                                         <td>Certain ARIA roles must be contained by particular parents</td>
                                         <td>aria-required-parent</td>
                                         <td>WCAG 2 Level A, WCAG 1.3.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">18</th>
+                                        <th scope="row">17</th>
                                         <td>ARIA roles used must conform to valid values</td>
                                         <td>aria-roles</td>
                                         <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">19</th>
+                                        <th scope="row">18</th>
                                         <td>&quot;role&#x3D;text&quot; should have no focusable descendants</td>
                                         <td>aria-text</td>
                                         <td>Best practice</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">20</th>
+                                        <th scope="row">19</th>
                                         <td>ARIA toggle fields must have an accessible name</td>
                                         <td>aria-toggle-field-name</td>
                                         <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">21</th>
+                                        <th scope="row">20</th>
                                         <td>ARIA tooltip nodes must have an accessible name</td>
                                         <td>aria-tooltip-name</td>
                                         <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">22</th>
+                                        <th scope="row">21</th>
                                         <td>ARIA treeitem nodes should have an accessible name</td>
                                         <td>aria-treeitem-name</td>
                                         <td>Best practice</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">23</th>
+                                        <th scope="row">22</th>
                                         <td>ARIA attributes must conform to valid values</td>
                                         <td>aria-valid-attr-value</td>
                                         <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">24</th>
+                                        <th scope="row">23</th>
                                         <td>ARIA attributes must conform to valid names</td>
                                         <td>aria-valid-attr</td>
                                         <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">25</th>
+                                        <th scope="row">24</th>
                                         <td>autocomplete attribute must be used correctly</td>
                                         <td>autocomplete-valid</td>
                                         <td>WCAG 2.1 Level AA, WCAG 1.3.5</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">26</th>
-                                        <td>Inline text spacing must be adjustable with custom stylesheets</td>
-                                        <td>avoid-inline-spacing</td>
-                                        <td>WCAG 2.1 Level AA, WCAG 1.4.1.2</td>
-                                    </tr>
-                                </tbody>
-                                    <tr>
-                                        <th scope="row">27</th>
+                                        <th scope="row">25</th>
                                         <td>&lt;blink&gt; elements are deprecated and must not be used</td>
                                         <td>blink</td>
                                         <td>WCAG 2 Level A, WCAG 2.2.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">28</th>
-                                        <td>Buttons must have discernible text</td>
-                                        <td>button-name</td>
-                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
-                                    </tr>
-                                </tbody>
-                                    <tr>
-                                        <th scope="row">29</th>
-                                        <td>Page must have means to bypass repeated blocks</td>
-                                        <td>bypass</td>
-                                        <td>WCAG 2 Level A, WCAG 2.4.1</td>
-                                    </tr>
-                                </tbody>
-                                    <tr>
-                                        <th scope="row">30</th>
-                                        <td>Elements must meet minimum color contrast ratio thresholds</td>
-                                        <td>color-contrast</td>
-                                        <td>WCAG 2 Level AA, WCAG 1.4.3</td>
-                                    </tr>
-                                </tbody>
-                                    <tr>
-                                        <th scope="row">31</th>
+                                        <th scope="row">26</th>
                                         <td>&lt;dl&gt; elements must only directly contain properly-ordered &lt;dt&gt; and &lt;dd&gt; groups, &lt;script&gt;, &lt;template&gt; or &lt;div&gt; elements</td>
                                         <td>definition-list</td>
                                         <td>WCAG 2 Level A, WCAG 1.3.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">32</th>
+                                        <th scope="row">27</th>
                                         <td>&lt;dt&gt; and &lt;dd&gt; elements must be contained by a &lt;dl&gt;</td>
                                         <td>dlitem</td>
                                         <td>WCAG 2 Level A, WCAG 1.3.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">33</th>
+                                        <th scope="row">28</th>
                                         <td>IDs used in ARIA and labels must be unique</td>
                                         <td>duplicate-id-aria</td>
                                         <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">34</th>
+                                        <th scope="row">29</th>
                                         <td>Headings should not be empty</td>
                                         <td>empty-heading</td>
                                         <td>Best practice</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">35</th>
+                                        <th scope="row">30</th>
                                         <td>Table header text should not be empty</td>
                                         <td>empty-table-header</td>
                                         <td>Best practice</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">36</th>
+                                        <th scope="row">31</th>
                                         <td>Form field must not have multiple label elements</td>
                                         <td>form-field-multiple-labels</td>
                                         <td>WCAG 2 Level A, WCAG 3.3.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">37</th>
+                                        <th scope="row">32</th>
                                         <td>Frames with focusable content must not have tabindex&#x3D;-1</td>
                                         <td>frame-focusable-content</td>
                                         <td>WCAG 2 Level A, WCAG 2.1.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">38</th>
+                                        <th scope="row">33</th>
                                         <td>Frames should be tested with axe-core</td>
                                         <td>frame-tested</td>
                                         <td>Best practice</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">39</th>
+                                        <th scope="row">34</th>
                                         <td>Frames must have a unique title attribute</td>
                                         <td>frame-title-unique</td>
                                         <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">40</th>
+                                        <th scope="row">35</th>
                                         <td>Frames must have an accessible name</td>
                                         <td>frame-title</td>
                                         <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">41</th>
+                                        <th scope="row">36</th>
                                         <td>Heading levels should only increase by one</td>
                                         <td>heading-order</td>
                                         <td>Best practice</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">42</th>
-                                        <td>&lt;html&gt; element must have a valid value for the lang attribute</td>
-                                        <td>html-lang-valid</td>
-                                        <td>WCAG 2 Level A, WCAG 3.1.1</td>
-                                    </tr>
-                                </tbody>
-                                    <tr>
-                                        <th scope="row">43</th>
+                                        <th scope="row">37</th>
                                         <td>HTML elements with lang and xml:lang must have the same base language</td>
                                         <td>html-xml-lang-mismatch</td>
                                         <td>WCAG 2 Level A, WCAG 3.1.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">44</th>
-                                        <td>Images must have alternate text</td>
-                                        <td>image-alt</td>
-                                        <td>WCAG 2 Level A, WCAG 1.1.1</td>
-                                    </tr>
-                                </tbody>
-                                    <tr>
-                                        <th scope="row">45</th>
-                                        <td>Alternative text of images should not be repeated as text</td>
-                                        <td>image-redundant-alt</td>
-                                        <td>Best practice</td>
-                                    </tr>
-                                </tbody>
-                                    <tr>
-                                        <th scope="row">46</th>
+                                        <th scope="row">38</th>
                                         <td>Input buttons must have discernible text</td>
                                         <td>input-button-name</td>
                                         <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">47</th>
+                                        <th scope="row">39</th>
                                         <td>Image buttons must have alternate text</td>
                                         <td>input-image-alt</td>
                                         <td>WCAG 2 Level A, WCAG 1.1.1, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">48</th>
+                                        <th scope="row">40</th>
                                         <td>Form elements should have a visible label</td>
                                         <td>label-title-only</td>
                                         <td>Best practice</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">49</th>
+                                        <th scope="row">41</th>
                                         <td>Form elements must have labels</td>
                                         <td>label</td>
                                         <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">50</th>
+                                        <th scope="row">42</th>
                                         <td>Banner landmark should not be contained in another landmark</td>
                                         <td>landmark-banner-is-top-level</td>
                                         <td>Best practice</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">51</th>
+                                        <th scope="row">43</th>
                                         <td>Aside should not be contained in another landmark</td>
                                         <td>landmark-complementary-is-top-level</td>
                                         <td>Best practice</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">52</th>
-                                        <td>Contentinfo landmark should not be contained in another landmark</td>
-                                        <td>landmark-contentinfo-is-top-level</td>
-                                        <td>Best practice</td>
-                                    </tr>
-                                </tbody>
-                                    <tr>
-                                        <th scope="row">53</th>
+                                        <th scope="row">44</th>
                                         <td>Main landmark should not be contained in another landmark</td>
                                         <td>landmark-main-is-top-level</td>
                                         <td>Best practice</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">54</th>
+                                        <th scope="row">45</th>
                                         <td>Document should not have more than one banner landmark</td>
                                         <td>landmark-no-duplicate-banner</td>
                                         <td>Best practice</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">55</th>
-                                        <td>Document should not have more than one contentinfo landmark</td>
-                                        <td>landmark-no-duplicate-contentinfo</td>
-                                        <td>Best practice</td>
-                                    </tr>
-                                </tbody>
-                                    <tr>
-                                        <th scope="row">56</th>
+                                        <th scope="row">46</th>
                                         <td>Document should not have more than one main landmark</td>
                                         <td>landmark-no-duplicate-main</td>
                                         <td>Best practice</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">57</th>
-                                        <td>Ensures landmarks are unique</td>
-                                        <td>landmark-unique</td>
-                                        <td>Best practice</td>
-                                    </tr>
-                                </tbody>
-                                    <tr>
-                                        <th scope="row">58</th>
+                                        <th scope="row">47</th>
                                         <td>Links must be distinguishable without relying on color</td>
                                         <td>link-in-text-block</td>
                                         <td>WCAG 2 Level A, WCAG 1.4.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">59</th>
-                                        <td>Links must have discernible text</td>
-                                        <td>link-name</td>
-                                        <td>WCAG 2 Level A, WCAG 2.4.4, WCAG 4.1.2</td>
-                                    </tr>
-                                </tbody>
-                                    <tr>
-                                        <th scope="row">60</th>
-                                        <td>&lt;ul&gt; and &lt;ol&gt; must only directly contain &lt;li&gt;, &lt;script&gt; or &lt;template&gt; elements</td>
-                                        <td>list</td>
-                                        <td>WCAG 2 Level A, WCAG 1.3.1</td>
-                                    </tr>
-                                </tbody>
-                                    <tr>
-                                        <th scope="row">61</th>
-                                        <td>&lt;li&gt; elements must be contained in a &lt;ul&gt; or &lt;ol&gt;</td>
-                                        <td>listitem</td>
-                                        <td>WCAG 2 Level A, WCAG 1.3.1</td>
-                                    </tr>
-                                </tbody>
-                                    <tr>
-                                        <th scope="row">62</th>
+                                        <th scope="row">48</th>
                                         <td>&lt;marquee&gt; elements are deprecated and must not be used</td>
                                         <td>marquee</td>
                                         <td>WCAG 2 Level A, WCAG 2.2.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">63</th>
+                                        <th scope="row">49</th>
                                         <td>Delayed refresh under 20 hours must not be used</td>
                                         <td>meta-refresh</td>
                                         <td>WCAG 2 Level A, WCAG 2.2.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">64</th>
-                                        <td>Users should be able to zoom and scale the text up to 500%</td>
-                                        <td>meta-viewport-large</td>
-                                        <td>Best practice</td>
-                                    </tr>
-                                </tbody>
-                                    <tr>
-                                        <th scope="row">65</th>
-                                        <td>Zooming and scaling must not be disabled</td>
-                                        <td>meta-viewport</td>
-                                        <td>WCAG 2 Level AA, WCAG 1.4.4</td>
-                                    </tr>
-                                </tbody>
-                                    <tr>
-                                        <th scope="row">66</th>
-                                        <td>Interactive controls must not be nested</td>
-                                        <td>nested-interactive</td>
-                                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
-                                    </tr>
-                                </tbody>
-                                    <tr>
-                                        <th scope="row">67</th>
+                                        <th scope="row">50</th>
                                         <td>&lt;object&gt; elements must have alternate text</td>
                                         <td>object-alt</td>
                                         <td>WCAG 2 Level A, WCAG 1.1.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">68</th>
+                                        <th scope="row">51</th>
                                         <td>Ensure elements marked as presentational are consistently ignored</td>
                                         <td>presentation-role-conflict</td>
                                         <td>Best practice</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">69</th>
-                                        <td>All page content should be contained by landmarks</td>
-                                        <td>region</td>
-                                        <td>Best practice</td>
-                                    </tr>
-                                </tbody>
-                                    <tr>
-                                        <th scope="row">70</th>
+                                        <th scope="row">52</th>
                                         <td>[role&#x3D;&quot;img&quot;] elements must have an alternative text</td>
                                         <td>role-img-alt</td>
                                         <td>WCAG 2 Level A, WCAG 1.1.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">71</th>
+                                        <th scope="row">53</th>
                                         <td>scope attribute should be used correctly</td>
                                         <td>scope-attr-valid</td>
                                         <td>Best practice</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">72</th>
+                                        <th scope="row">54</th>
                                         <td>Scrollable region must have keyboard access</td>
                                         <td>scrollable-region-focusable</td>
                                         <td>WCAG 2 Level A, WCAG 2.1.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">73</th>
+                                        <th scope="row">55</th>
                                         <td>Select element must have an accessible name</td>
                                         <td>select-name</td>
                                         <td>WCAG 2 Level A, WCAG 4.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">74</th>
+                                        <th scope="row">56</th>
                                         <td>Server-side image maps must not be used</td>
                                         <td>server-side-image-map</td>
                                         <td>WCAG 2 Level A, WCAG 2.1.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">75</th>
+                                        <th scope="row">57</th>
                                         <td>The skip-link target should exist and be focusable</td>
                                         <td>skip-link</td>
                                         <td>Best practice</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">76</th>
+                                        <th scope="row">58</th>
                                         <td>&lt;svg&gt; elements with an img role must have an alternative text</td>
                                         <td>svg-img-alt</td>
                                         <td>WCAG 2 Level A, WCAG 1.1.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">77</th>
+                                        <th scope="row">59</th>
                                         <td>Elements should not have tabindex greater than zero</td>
                                         <td>tabindex</td>
                                         <td>Best practice</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">78</th>
+                                        <th scope="row">60</th>
                                         <td>tables should not have the same summary and caption</td>
                                         <td>table-duplicate-name</td>
                                         <td>Best practice</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">79</th>
+                                        <th scope="row">61</th>
                                         <td>Table cells that use the headers attribute must only refer to cells in the same table</td>
                                         <td>td-headers-attr</td>
                                         <td>WCAG 2 Level A, WCAG 1.3.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">80</th>
+                                        <th scope="row">62</th>
                                         <td>Table headers in a data table must refer to data cells</td>
                                         <td>th-has-data-cells</td>
                                         <td>WCAG 2 Level A, WCAG 1.3.1</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">81</th>
+                                        <th scope="row">63</th>
                                         <td>lang attribute must have a valid value</td>
                                         <td>valid-lang</td>
                                         <td>WCAG 2 Level AA, WCAG 3.1.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">82</th>
+                                        <th scope="row">64</th>
                                         <td>&lt;video&gt; elements must have captions</td>
                                         <td>video-caption</td>
                                         <td>WCAG 2 Level A, WCAG 1.2.2</td>
                                     </tr>
                                 </tbody>
                                     <tr>
-                                        <th scope="row">83</th>
+                                        <th scope="row">65</th>
                                         <td>&lt;video&gt; or &lt;audio&gt; elements must not play automatically</td>
                                         <td>no-autoplay-audio</td>
                                         <td>WCAG 2 Level A, WCAG 1.4.2</td>
