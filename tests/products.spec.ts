@@ -1,6 +1,6 @@
 import { test } from "../lib/baseTest";
 
-test.describe("Verify products home page", () => {
+test.describe("Verify products home page @ui-test", () => {
 
     test.beforeEach('Test set up', async({ productsPage }) => {
         await productsPage.goToLandinPage();

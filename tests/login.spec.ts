@@ -1,6 +1,6 @@
 import { test } from "../lib/baseTest";
 
-test.describe('Login into an application', () => {
+test.describe('Login into an application @ui-test', () => {
 
     test('Login with valid credentials', async({ loginPage }) => {
         await loginPage.goToLandinPage();

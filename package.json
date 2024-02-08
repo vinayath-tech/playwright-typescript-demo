@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --ext .ts",
-    "headless-test": "cross-env test_env=test npx playwright test --reporter=html",
-    "headed-test": "npm run lint && cross-env test_env=test npx playwright test --headed",
-    "accessibility-test": "cross-env test_env=test npx playwright test --grep @pa11y-tests",
+    "headless-test": "cross-env test_env=test npx playwright test --reporter=html --grep @ui-test --config=config/playwright.config.ts",
+    "headed-test": "npm run lint && cross-env test_env=test npx playwright test --headed --config=config/playwright.config.ts",
+    "accessibility-test": "cross-env test_env=test npx playwright test --grep @pa11y-tests --config=config/playwright.config.ts",
+    "api-test": "cross-env test_env=test npx playwright test --grep @api-test --config=config/playwright.api.config.ts",
     "docker-build": "docker build -t playwright-docker .",
     "docker-run-tests": "docker run playwright-docker:latest"
   },
@@ -24,6 +25,7 @@
   "dependencies": {
     "@axe-core/playwright": "^4.8.4",
     "@faker-js/faker": "^8.4.0",
+    "ajv": "^8.12.0",
     "axe-html-reporter": "^2.2.3",
     "cross-env": "^7.0.3",
     "dotenv": "^16.3.1"

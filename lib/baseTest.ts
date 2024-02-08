@@ -4,7 +4,7 @@ import { LoginPage } from '../pageFactory/loginPage';
 import { ProductsPage } from '../pageFactory/productsPage';
 import { CartPage } from '../pageFactory/cartPage';
 import { CheckoutPage } from '../pageFactory/checkoutPage';
-import { STORAGE_STATE } from '../playwright.config';
+import { STORAGE_STATE } from '../config/playwright.config';
 
 
 type MyFixtures = {
