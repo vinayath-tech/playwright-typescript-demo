@@ -1,6 +1,6 @@
-import { expect, test } from "../lib/baseTest";
+import { expect } from "../lib/baseTest";
 import { createHtmlReport} from "axe-html-reporter";
-const fs = require('fs');
+import fs from 'fs';
 
 export async function checkPa11y(makeAxeBuilder) {
 

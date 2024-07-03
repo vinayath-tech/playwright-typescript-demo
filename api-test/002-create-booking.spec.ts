@@ -1,10 +1,11 @@
 import {test, expect} from '@playwright/test';
 import { createBookingTestData } from '../test-data/apipayload/booking-data';
 import { validateJsonSchema, setVariable } from "./util/apiUtility";
+import postBookingSchema from './schema/post-booking-schema.json';
 
 test.describe('Create a new booking test  @api-test', async() =>{
 
-    const postBookingSchema = require('./schema/post-booking-schema.json');
+    // const postBookingSchema = require('./schema/post-booking-schema.json');
 
 
     test('Create a new booking', async({ request }) => { 

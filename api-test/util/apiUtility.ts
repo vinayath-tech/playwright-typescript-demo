@@ -2,7 +2,7 @@ import Ajv from "ajv";
 import { expect } from "@playwright/test";
 
 const ajv = new Ajv();
-let store = {};
+const store = {};
 
 
 export function validateJsonSchema(schema, body) {
@@ -14,10 +14,10 @@ export function validateJsonSchema(schema, body) {
     expect(valid).toBe(true);
 }
 
-export function setVariable(key: any, data: any) {
+export function setVariable(key, data) {
     store[key] = data
 }
 
-export function getVariable(key: any) {
+export function getVariable(key) {
     return store[key];
 }

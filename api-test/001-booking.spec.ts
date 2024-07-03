@@ -1,20 +1,21 @@
 import { expect, test } from "@playwright/test";
-import { createBookingTestData } from "../test-data/apipayload/booking-data";
+// import { createBookingTestData } from "../test-data/apipayload/booking-data";
 import { validateJsonSchema, setVariable } from "./util/apiUtility";
 import ENV from "../lib/env";
+import authSchema from './schema/auth-schema.json';
 
 test.describe('Authentication endpoint tests @api-test', async() => {
 
-    let token: any;
+    let token: string;
     const apiUname = ENV.API_USERNAME;
     const apiPword = ENV.API_PASSWORD;
 
     //Schema value declarations
-    const authSchema = require('./schema/auth-schema.json');
+    // const authSchema = require('./schema/auth-schema.json');
 
     test('Create a token by passing valid credentials', async({ request })=> {
 
-        const authResponse: any =  await request.post('/auth', {
+        const authResponse =  await request.post('/auth', {
             data: {
                 "username": `${apiUname}`,
                 "password": `${apiPword}`
