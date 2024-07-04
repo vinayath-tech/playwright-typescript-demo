@@ -1,5 +1,5 @@
 import { expect, Locator, Page } from "@playwright/test";
-import jsonData from "../test-data/data.json";
+import jsonData from "../../test-data/data.json";
 
 export class ProductsPage {
 
@@ -37,7 +37,7 @@ export class ProductsPage {
         await expect(this.itemCount).toHaveCount(6);
     }
 
-    async addMultipleProductsToCart(): Promise<void> {
+    async includeMultipleProductsToCart(): Promise<void> {
         await this.addFirstItem.click();
         await this.addSecondItem.click();
 

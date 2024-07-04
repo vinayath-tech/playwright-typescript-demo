@@ -1,5 +1,5 @@
 import { expect, Locator, Page } from '@playwright/test';
-import jsonData from "../test-data/data.json";
+import jsonData from "../../test-data/data.json";
 
 
 export class CartPage {

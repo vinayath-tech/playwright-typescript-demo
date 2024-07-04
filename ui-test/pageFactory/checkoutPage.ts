@@ -1,7 +1,7 @@
 /*eslint-disable no-useless-escape */
 import { expect, Locator, Page } from "@playwright/test";
 import { faker } from '@faker-js/faker';
-import jsonData from "../test-data/data.json";
+import jsonData from "../../test-data/data.json";
 
 
 export class CheckoutPage {
