@@ -1,11 +1,6 @@
 import { test as baseTest } from '@playwright/test';
 import { AxeBuilder } from '@axe-core/playwright';
-import { LoginPage } from '../pageFactory/loginPage';
-// import { ProductsPage } from '../pageFactory/productsPage';
-import { CartPage } from '../pageFactory/cartPage';
-import { CheckoutPage } from '../pageFactory/checkoutPage';
 import { STORAGE_STATE } from '../config/playwright.config';
-
 import LoginSteps from '../ui-test/steps/loginSteps';
 import ProductSteps from '../ui-test/steps/productSteps';
 import CartSteps from '../ui-test/steps/cartSteps';
@@ -13,10 +8,6 @@ import CheckoutSteps from '../ui-test/steps/checkoutSteps';
 
 
 type MyFixtures = {
-    loginPage: LoginPage,
-    // productsPage: ProductsPage,
-    checkoutPage: CheckoutPage,
-    cartPage: CartPage,
     loginSteps: LoginSteps,
     productSteps: ProductSteps,
     cartSteps: CartSteps,

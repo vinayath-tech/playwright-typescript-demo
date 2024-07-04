@@ -2,14 +2,13 @@
 import { expect, Locator, Page } from "@playwright/test";
 import { faker } from '@faker-js/faker';
 import jsonData from "../../test-data/data.json";
+import { WebAction } from "../common/web.actions";
 
+let webAction: WebAction;
 
 export class CheckoutPage {
 
     readonly page: Page;
-    readonly fname: Locator;
-    readonly lname: Locator;
-    readonly postCode: Locator;
     readonly checkoutContinueBtn: Locator;
     readonly itemNameList: Locator;
     readonly paymentSummaryInfoEle: Locator;
@@ -23,10 +22,6 @@ export class CheckoutPage {
 
     constructor(page: Page){
         this.page = page;
-        this.fname = page.getByPlaceholder('First Name');
-        this.lname = page.getByPlaceholder('Last Name');
-        this.postCode = page.getByPlaceholder('Zip/Postal Code');
-        this.checkoutContinueBtn = page.getByRole('button', { name: 'Continue'});
         this.itemNameList = page.locator('.inventory_item_name');
         this.paymentSummaryInfoEle = page.locator('.summary_info_label');
         this.paymentSummaryValueEle = page.locator('.summary_value_label');
@@ -35,21 +30,24 @@ export class CheckoutPage {
         this.finishBtn = page.getByRole('button', { name: 'Finish'});
         this.confirmationEle = page.getByText(jsonData.confirmationMsg);
         this.backBtn = page.getByRole('button', {name: 'Back Home'});
+
+        webAction = new WebAction(this.page);
     }
 
     async goToCheckoutPage() {
-        await this.page.goto('/checkout-step-one.html');
+        await webAction.navigateToUrl('/checkout-step-one.html');
     }
 
     async goToFinalCheckoutPage() {
-        await this.page.goto('/checkout-step-two.html');
+        await webAction.navigateToUrl('/checkout-step-two.html');
     }
 
     async fillPersonalDetails() {
-        await this.fname.fill(faker.person.firstName());
-        await this.lname.fill(faker.person.lastName());
-        await this.postCode.fill(faker.location.zipCode());
-        await this.checkoutContinueBtn.click();
+        await webAction.enterTextByPlaceHolder('First Name', faker.person.firstName());
+        await webAction.enterTextByPlaceHolder('Last Name', faker.person.lastName());
+        await webAction.enterTextByPlaceHolder('Zip/Postal Code', faker.location.zipCode());
+
+        await webAction.clickElementByRole('Continue');
     }
 
     async verifyCheckoutSummary() {
