@@ -1,6 +1,6 @@
 import { test as setup, expect } from '@playwright/test';
-import { STORAGE_STATE } from '../config/playwright.config';
-import ENV from '../lib/env';
+import { STORAGE_STATE } from '../../config/playwright.config';
+import ENV from '../../lib/env';
 
 setup('Authenticate application', async({ page }) => {
     const uname = ENV.TEST_USERNAME || '';
