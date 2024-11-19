@@ -1,6 +1,9 @@
 import { expect, Locator, Page } from '@playwright/test';
 import jsonData from "../../test-data/data.json";
+import { WebAction } from '../common/web.actions';
 
+
+let webAction: WebAction;
 
 export class CartPage {
     readonly page: Page;
@@ -23,6 +26,8 @@ export class CartPage {
         this.cartEle = page.locator('.shopping_cart_badge');
         this.productTitleEle = page.locator('#item_5_title_link div.inventory_item_name');
         this.productDescEle = page.locator('.cart_item_label div.inventory_item_desc');
+
+        webAction = new WebAction(this.page);
     }
 
     async checkCartPageNavigation(): Promise<void> {
@@ -37,16 +42,16 @@ export class CartPage {
     }
 
     async checkProductRemovalfromCartPage(): Promise<void> {
-        await expect(this.itemCount).toHaveCount(2);
-        await this.removeBackPackBtn.click();
+        await webAction.verifyEleCountByLocator('.inventory_item_name', 2);
+        await webAction.clickElement('#remove-sauce-labs-backpack');
         
         await expect(this.removeBackPackBtn).toBeHidden();
-        await expect(this.itemCount).toHaveCount(1);
-        await expect(this.cartEle).toHaveText('1');
+        await webAction.verifyEleCountByLocator('.inventory_item_name', 1);
+        await webAction.verifyText('.shopping_cart_badge', '1');
     }
 
     async checkItemDetailsOnCartPage(): Promise<void> {
-        await expect(this.productTitleEle).toHaveText(jsonData.secondProductName);
-        await expect(this.productDescEle).toContainText(jsonData.productDescText);
+        await webAction.verifyText('#item_5_title_link div.inventory_item_name', jsonData.secondProductName);
+        await webAction.verifyText('.cart_item_label div.inventory_item_desc', jsonData.productDescText);
     }
 }
