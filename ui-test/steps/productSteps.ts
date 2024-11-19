@@ -1,34 +1,43 @@
 import { Page } from "@playwright/test";
+import { test } from "../../lib/baseTest";
 import BaseSteps from "./baseSteps";
 
 export default class ProductSteps extends BaseSteps {
-
-    readonly page: Page;
 
     constructor(page: Page) {
         super(page);
     }
 
-    async navigateToLandingPage() {
-        await this.productsPage.goToLandinPage();
+    navigateToLandingPage = async():Promise<void> => {
+        await test.step(`Navigate to landing page`, async() => {
+            await this.productsPage.goToLandinPage();
+        })
     }
 
-    async navigateToDetailsPage() {
-        await this.productsPage.goToProductDetailPage();
+    navigateToDetailsPage = async():Promise<void> => {
+        await test.step(`Navigate to details page`, async() => {
+            await this.productsPage.goToProductDetailPage();
+        })
     }
 
-    async checkProdCount() {
-        await this.productsPage.verifyProductCount();
+    checkProdCount = async():Promise<void> => {
+        await test.step(`Check product count`, async() => {
+            await this.productsPage.verifyProductCount();
+        });
     }
 
-    async addMultipleProductsToCart() {
-        await this.productsPage.goToLandinPage();
-        await this.productsPage.includeMultipleProductsToCart();
-        await this.productsPage.clickCartEle();
+    addMultipleProductsToCart = async():Promise<void> => {
+        await test.step(`Add multiple products to cart`, async() => {
+            await this.productsPage.goToLandinPage();
+            await this.productsPage.includeMultipleProductsToCart();
+            await this.productsPage.clickCartEle();
+        });
     }
 
-    async navigateToCartsPage() {
-        await this.productsPage.addProductToCart();
-        await this.productsPage.clickCartEle();
+    navigateToCartsPage = async():Promise<void> => {
+        await test.step(`Navigate to carts page`, async() => {
+            await this.productsPage.addProductToCart();
+            await this.productsPage.clickCartEle();
+        });
     }
 }
