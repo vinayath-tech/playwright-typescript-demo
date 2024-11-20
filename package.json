@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint . --ext .ts",
     "headless-test": "cross-env test_env=test npx playwright test --reporter=html --grep @ui-test --config=config/playwright.config.ts",
-    "headed-test": "npm run lint && cross-env test_env=test npx playwright test --headed --config=config/playwright.config.ts",
+    "headed-test": "npm run lint && cross-env test_env=test npx playwright test --headed --grep @ui-test --config=config/playwright.config.ts",
     "accessibility-test": "cross-env test_env=test npx playwright test --grep @pa11y-tests --config=config/playwright.config.ts",
     "api-test": "cross-env test_env=test npx playwright test --grep @api-test --config=config/playwright.api.config.ts",
     "docker-build": "docker build -t playwright-docker .",

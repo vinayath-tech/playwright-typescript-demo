@@ -37,8 +37,20 @@ export class WebAction {
         await this.page.locator(eleLocator).click();
     }
 
+    async clickElementByText(eleText: string) {
+        await this.page.getByText(eleText).click();
+    }
+
     async clickElementByRole(eleName: string) {
         await this.page.getByRole('button', { name: eleName}).click();
+    }
+
+    async verifyElementVisibility(eleLocator: string) {
+        await expect(this.page.locator(eleLocator)).toBeVisible();
+    }
+
+    async delay(ms: number) {
+        return new Promise(resolve => setTimeout(resolve, ms));
     }
 
 }
