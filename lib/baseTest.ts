@@ -5,13 +5,14 @@ import LoginSteps from '../ui-test/steps/loginSteps';
 import ProductSteps from '../ui-test/steps/productSteps';
 import CartSteps from '../ui-test/steps/cartSteps';
 import CheckoutSteps from '../ui-test/steps/checkoutSteps';
-
+import ProdDetailsSteps from '../ui-test/steps/prodDetailsSteps';
 
 type MyFixtures = {
     loginSteps: LoginSteps,
     productSteps: ProductSteps,
     cartSteps: CartSteps,
-    checkoutSteps: CheckoutSteps
+    checkoutSteps: CheckoutSteps,
+    prodDetailsSteps: ProdDetailsSteps,
     makeAxeBuilder: () => AxeBuilder
 
 };
@@ -39,6 +40,11 @@ export const test = baseTest.extend<MyFixtures>({
     checkoutSteps: async ({ page }, use) => {
         const checkoutSteps =  new CheckoutSteps(page);
         await use(checkoutSteps);
+    },
+
+    prodDetailsSteps: async({ page }, use) => {
+        const prodDetailsSteps =  new ProdDetailsSteps(page);
+        await use(prodDetailsSteps);
     },
 
     makeAxeBuilder: async ({ page }, use) => {
