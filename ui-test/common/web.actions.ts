@@ -49,8 +49,19 @@ export class WebAction {
         await expect(this.page.locator(eleLocator)).toBeVisible();
     }
 
+    async chooseOption(eleLocator: string, valText: string) {
+        await this.page.locator(eleLocator).selectOption(valText);
+    }
+
     async delay(ms: number) {
         return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async areArraysEqual(arr1: string[], arr2: string[]): Promise<boolean> {
+        if (arr1.length !== arr2.length) {
+            return false;
+        }
+        return arr1.every((value, index) => value === arr2[index]);
     }
 
 }

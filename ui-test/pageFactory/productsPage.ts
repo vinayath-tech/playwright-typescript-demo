@@ -50,4 +50,8 @@ export class ProductsPage {
         await webAction.clickElementByRole('Add to cart');
     }
 
+    async sortByHighToLow() {
+        await webAction.chooseOption('.product_sort_container', 'hilo');
+    }
+
 }
