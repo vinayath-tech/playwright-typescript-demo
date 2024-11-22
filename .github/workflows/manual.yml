@@ -52,31 +52,67 @@ jobs:
           path: api-test-report/
           retention-days: 30
 
-  ui-tests:
-    timeout-minutes: 20
+  # ui-tests:
+  #   timeout-minutes: 20
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - uses: actions/checkout@v3
+  #   - uses: actions/setup-node@v3
+  #     with:
+  #       node-version: 16
+  #   - name: Build Docker image
+  #     run: npm run docker-build
+  #   - name: Run Playwright tests on Docker
+  #     run: npm run docker-run-tests
+  #   - uses: actions/upload-artifact@v3
+  #     if: always()
+  #     with:
+  #       name: playwright-report
+  #       path: playwright-report/
+  #       retention-days: 30
+  #   - name: Setup Pages
+  #     uses: actions/configure-pages@v2
+  #   - name: Upload artifact
+  #     uses: actions/upload-pages-artifact@v1
+  #     with:
+  #       # Upload entire repository
+  #       path: playwright-report/
+  #   - name: Deploy to GitHub Pages
+  #     id: deployment
+  #     uses: actions/deploy-pages@v1
+
+  cloud-tests:
+    timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: 16
-    - name: Build Docker image
-      run: npm run docker-build
-    - name: Run Playwright tests on Docker
-      run: npm run docker-run-tests
-    - uses: actions/upload-artifact@v3
-      if: always()
-      with:
-        name: playwright-report
-        path: playwright-report/
-        retention-days: 30
-    - name: Setup Pages
-      uses: actions/configure-pages@v2
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v1
-      with:
-        # Upload entire repository
-        path: playwright-report/
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16  
+
+      - name: Login to Azure with AzPowershell (enableAzPSSession true) 
+        uses: azure/login@v2 
+        with: 
+          client-id: ${{ secrets.AZURE_CLIENT_ID }} 
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}  
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}  
+          enable-AzPSSession: true
+        # run: |
+        #   az login
+        #     --tenant ${{ secrets.AZURE_TENANT_ID }}
+
+      - name: Install packages
+        run: npm install && npx playwright install
+      - name: Run Playwright tests
+        env:
+          # Regional endpoint for Microsoft Playwright Testing
+          PLAYWRIGHT_SERVICE_URL: ${{ secrets.PLAYWRIGHT_SERVICE_URL }}
+        run: npm run cloud-test
+
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          # Upload entire repository
+          path: playwright-report/ # update accordingly
+          retention-days: 10
