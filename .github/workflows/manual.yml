@@ -114,3 +114,4 @@ jobs:
           # Upload entire repository
           path: playwright-report/ # update accordingly
           retention-days: 10
+          
