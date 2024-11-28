@@ -53,7 +53,11 @@ export default defineConfig({
 
     // {
     //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
+    //   use: { 
+    //     ...devices['Desktop Firefox'], 
+    //     storageState: STORAGE_STATE,
+    //   },
+    //   dependencies: ['setup'],
     // },
 
     // {
@@ -74,7 +78,12 @@ export default defineConfig({
     /* Test against branded browsers. */
     // {
     //   name: 'Microsoft Edge',
-    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
+    //   use: { 
+    //     ...devices['Desktop Edge'], 
+    //     channel: 'msedge',
+    //     storageState: STORAGE_STATE
+    //   },
+    //   dependencies: ['setup']
     // },
     // {
     //   name: 'Google Chrome',
