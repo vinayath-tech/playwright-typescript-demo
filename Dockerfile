@@ -2,7 +2,7 @@
 FROM node:16
 
 # Get the latest version of Playwright
-FROM  mcr.microsoft.com/playwright:v1.39.0-focal
+FROM  mcr.microsoft.com/playwright:v1.49.0-noble
  
 # Set the work directory for the application
 WORKDIR /app
